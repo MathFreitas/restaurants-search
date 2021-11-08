@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import Slider from "react-slick";
+import { existsTypeAnnotation } from '../../../../../../AppData/Local/Microsoft/TypeScript/4.4/node_modules/@babel/types/lib/index';
 
 export const Wrapper = styled.div`
     display: flex;
@@ -33,7 +34,7 @@ export const Map = styled.div`
 
 export const Carousel = styled(Slider)`
     .slick-slider {
-        margin-right: 16px;
+        margin-right: 30px;
     }
 `;
 
@@ -44,4 +45,24 @@ export const CarouselTitle = styled.h1`
     font-weight: bold;
     font-height: 29px;
     margin: 16px 0;
+`;
+
+export const ModalTitle = styled.p`
+    margin-bottom: 10px;
+    letter-spacing: 0.11px;
+    font-family: ${(props) => props.theme.fonts.regular};
+    color: ${(props) => props.theme.colors.text};
+    text-transform: none;
+    line-height: 29px;
+    font-size: 24px;
+    font-weight: bold;
+`;
+
+export const ModalContent = styled.p`
+    margin-bottom: 10px;
+    font-family: ${(props) => props.theme.fonts.regular};
+    color: ${(props) => props.theme.colors.text};
+    line-height: 19px;
+    font-size: 16px;
+    font-weight: normal;
 `;
